@@ -1,0 +1,33 @@
+{
+    "title": "Hello, World!",
+    "welcome": "WELCOME",
+    "name": "I am Tran Van Tuoi",
+    "greeting": "Welcome to my website.",
+    "language": [
+        "ReactJS",
+        "NextJS",
+        "VueJS",
+        "NodeJS",
+        "ExpressJS"
+    ],
+    "stateManagement": [
+        "Redux",
+        "Redux-Thunk",
+        "Pinia"
+    ],
+    "Style": [
+        "Material UI",
+        "Style Component",
+        "Bootstrap"
+    ],
+    "Other": [
+        "OOP",
+        "RESTful API",
+        "SQL",
+        "Responsive",
+        "ORM",
+        "Git",
+        "IIS on Windows Server",
+        "Vercel"
+    ]
+}

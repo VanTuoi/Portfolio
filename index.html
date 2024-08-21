@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Start your development with Meyawo landing page.">
     <meta name="author" content="Devcrud">
-    <title>Meyawo Landing page | Free Bootstrap 4.3.x landing page</title>
+    <title data-i18n-key="title">Hello, World!</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/dist/aos.css" />
     <!-- Bootstrap + Meyawo main styles -->
     <link rel="stylesheet" href="assets/css/meyawo.css">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-
     <!-- Page Navbar -->
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
-            <a class="logo" href="#">Meyawo</a>
+            <a class="logo" href="#">Portfolio</a>
             <ul class="nav">
                 <li class="item">
                     <a class="link" href="#home">Home</a>
@@ -47,6 +47,16 @@
                     <div class="hamburger-inner"></div>
                 </div>
             </a>
+            <div class="dropdown d-inline-block ml-5 text-light bg-light rounded">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Language
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" selected onclick="i18n.setLocale('en')">English</a>
+                    <a class="dropdown-item" href="#" onclick="i18n.setLocale('vi')">Vietmamese</a>
+                </div>
+            </div>
         </div>
     </nav><!-- End of Page Navbar -->
 
@@ -55,12 +65,16 @@
         <div class="overlay"></div>
         <div class="header-content container">
             <h1 class="header-title">
-                <span class="up">XIN CHÀO!</span>
-                <span class="down">TôI là <br /> Trần Văn Tươi</span>
+                <span data-i18n-key="welcome" class="up" data-aos="fade-up" data-aos-duration="500"
+                    data-aos-anchor-placement="top-bottom">XIN CHÀO!</span>
+                <span data-i18n-key="name" class="down" data-aos="fade-up" data-aos-duration="750"
+                    data-aos-anchor-placement="top-bottom">TôI là <br /> Trần
+                    Văn Tươi</span>
             </h1>
-            <p class="header-subtitle">FRONTEND WEB DEVELOPER</p>
+            <p class="header-subtitle" data-aos="fade-up" data-aos-duration="1250"
+                data-aos-anchor-placement="top-bottom">FRONTEND WEB DEVELOPER</p>
 
-            <button class="btn btn-primary">Visit My Works</button>
+            <!-- <button class="btn btn-primary">Visit My Works</button> -->
         </div>
     </header><!-- end of page header -->
 
@@ -70,80 +84,82 @@
         <div class="container text-center">
             <!-- about wrapper -->
             <div class="about">
-                <div class="about-img-holder">
-                    <img src="assets/imgs/man.png" class="about-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                <div class="about-img-holder text-right">
+                    <img src="assets/imgs/AboutMe_6.png" class="about-img" data-aos="fade-right" alt="Img avatar">
                 </div>
                 <div class="about-caption">
-                    <p class="section-subtitle">Who Am I ?</p>
-                    <h2 class="section-title mb-3">About Me</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae aliquid ad provident aut
-                        fuga animi soluta quae eos non cupiditate voluptates dolorem, doloremque quos dicta quibusdam
-                        impedit iure nemo a iste
-                        <br>culpa! Quasi quibusdam hic recusandae delectus velit officiis explicabo voluptatibus! Nemo
-                        esse similique, voluptates labore distinctio, placeat explicabo facilis molestias, blanditiis
-                        culpa iusto voluptatem ratione eligendi a, quia temporibus velit vero ipsa sint ex voluptatum
-                        expedita aliquid! Debitis, nam!
+                    <p class="section-subtitle" data-aos="fade-left">Tôi là ai ?</p>
+                    <h2 class="section-title mb-3" data-aos="fade-left">Về bản thân tôi</h2>
+                    <p class="px-5 " style="text-align: justify;" data-aos="fade-left">
+                        Tôi hiện tại là một Frontend Developer. Tôi từng là sinh viên ngành Kỹ thuật Phần mềm (3.53/4.0
+                        GPA) đã tốt
+                        nghiệp tại Đại học Cần Thơ. Và từng là
+                        thực tập sinh tại Công ty Cổ phần Giải pháp Công nghệ GD Việt Nam - nơi tôi đã tham gia vào quá
+                        trình xây dựng và phát triễn các ứng dụng liên quan đến giáo dục. Hiện tại, tôi đang tìm kiếm
+                        một vị trí việc
+                        làm phù hợp với khả năng của bản thân để ngày càng hoàn thiện bản thân hơn.
                     </p>
-                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
                 </div>
+
             </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about-caption" data-aos="flip-left">
+                <h2 class="section-title mb-3">Frontend Developer là ai</h2>
+                <p>
+                    Là những người tập trung vào việc xây dựng phần giao diện người dùng của ứng dụng web. Các nhiệm vụ
+                    chính của Frontend Developer bao gồm thiết kế giao diện trực quan, tạo ra trải nghiệm người dùng hấp
+                    dẫn bằng cách sử dụng HTML, CSS và JavaScript, và đảm bảo rằng trang web hoạt động tốt trên nhiều
+                    thiết bị và trình duyệt khác nhau.
+                </p>
+            </div>
         </div><!-- end of container -->
     </section> <!-- end of about section -->
 
     <!-- service section -->
     <section class="section" id="service">
         <div class="container text-center">
-            <p class="section-subtitle">What I Do ?</p>
-            <h6 class="section-title mb-6">Service</h6>
+            <p class="section-subtitle" data-aos="fade-down">Tôi có thể làm gì ?</p>
+            <h6 class="section-title mb-6" data-aos="fade-down">Khả năng của tôi</h6>
             <!-- row -->
             <div class="row">
-                <div class="col-md-6 col-lg-3">
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-6 mb-2">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/pencil-case.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Adipisicing</h6>
-                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
-                                molestias dolorem iste quod.</p>
+                            <h6 class="title">Language/Framework</h6>
+                            <p data-i18n-key="language" class="subtitle text-left"> </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-12 col-lg-6 mb-2">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/responsive.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Sapiente</h6>
-                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
-                                molestias dolorem iste quod.</p>
+                            <h6 class="title">State management tool</h6>
+                            <p data-i18n-key="stateManagement" class="subtitle text-left"></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-12 col-lg-6 mb-2">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/toolbox.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Placeat</h6>
-                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
-                                molestias dolorem iste quod.</p>
+                            <h6 class="title">Style</h6>
+                            <p data-i18n-key="Style" class="subtitle text-left"></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-12 col-lg-6 mb-2">
                     <div class="service-card">
                         <div class="body">
-                            <img src="assets/imgs/analytics.svg"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page"
-                                class="icon">
-                            <h6 class="title">Iusto</h6>
-                            <p class="subtitle">Labore velit culpa adipisci excepturi consequuntur itaque in nam
-                                molestias dolorem iste quod.</p>
+                            <h6 class="title">Other</h6>
+                            <p data-i18n-key="Other" class="subtitle text-left"></p>
                         </div>
                     </div>
                 </div>
@@ -154,14 +170,25 @@
     <!-- portfolio section -->
     <section class="section" id="portfolio">
         <div class="container text-center">
-            <p class="section-subtitle">What I Did ?</p>
-            <h6 class="section-title mb-6">Portfolio</h6>
-            <!-- row -->
+            <p class="section-subtitle" data-aos="fade-down">Kinh nghiệm làm việc ?</p>
+            <h6 class="section-title mb-6">Kinh nghiệm làm việc của tôi</h6>
             <div class="row">
+                <div class="col-md-12 text-left">
+                    <h4>Công ty Cổ phần Giải pháp Công nghệ GD Việt Nam</h4>
+                    <span>5/2024 - 7/2024</span>
+                    <ul>
+                        <li>Thực tập sinh Front-End.</li>
+                        <li>Chịu trách nhiệm đề xuất ý tưởng, thiết kế và phát triển các sản phẩm phần mềm phục vụ cho
+                            ngành
+                            giáo dục.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
                 <div class="col-md-4">
                     <a href="#" class="portfolio-card">
-                        <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                        <img src="assets/imgs/folio-1.jpg" class="portfolio-card-img" alt="Img">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>Web Designing</h5>
@@ -173,7 +200,7 @@
                 <div class="col-md-4">
                     <a href="#" class="portfolio-card">
                         <img class="portfolio-card-img" src="assets/imgs/folio-2.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                            alt="Img">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>Web Designing</h5>
@@ -185,7 +212,7 @@
                 <div class="col-md-4">
                     <a href="#" class="portfolio-card">
                         <img class="portfolio-card-img" src="assets/imgs/folio-3.jpg" class="img-responsive rounded"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                            alt="Img">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
                                 <h4>Web Designing</h5>
@@ -194,170 +221,30 @@
                         </span>
                     </a>
                 </div>
-            </div><!-- end of row -->
+            </div> -->
         </div><!-- end of container -->
     </section> <!-- end of portfolio section -->
 
-    <!-- pricing section -->
-    <section class="section" id="pricing">
+    <section class="section" id="portfolio">
         <div class="container text-center">
-            <p class="section-subtitle">How Much I Charge ?</p>
-            <h6 class="section-title mb-6">My Pricing</h6>
-            <!-- row -->
-            <div class="pricing-wrapper">
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/scooter.svg"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Free</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p><i class="ti-close"></i></p>
-                            <p><i class="ti-close"></i></p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>0.00/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/shipped.svg"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Basic</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p>accusamus laboriosam</p>
-                            <p><i class="ti-close"></i></p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>9.99/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="assets/imgs/startup.svg"
-                            alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Premium</h6>
-                        <div class="pricing-card-list">
-                            <p>accusamus reprehenderit</p>
-                            <p>provident dolorem </p>
-                            <p>quos neque</p>
-                            <p>fugiat quibusdam</p>
-                            <p>accusamus laboriosam</p>
-                            <p>inventore omnis</p>
-                        </div>
-                    </div>
-                    <div class="pricing-card-footer">
-                        <span>$</span>
-                        <span>99.9/Month</span>
-                    </div>
-                    <a href="#" class="btn btn-primary mt-3 pricing-card-btn">Subscribe</a>
-                </div>
-
-            </div><!-- end of pricing wrapper -->
-        </div> <!-- end of container -->
-    </section><!-- end of pricing section -->
-
-    <!-- section -->
-    <section class="section-sm bg-primary">
-        <!-- container -->
-        <div class="container text-center text-sm-left">
-            <!-- row -->
-            <div class="row align-items-center">
-                <div class="col-sm offset-md-1 mb-4 mb-md-0">
-                    <h6 class="title text-light">Want to work with me?</h6>
-                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
-                </div>
-                <div class="col-sm offset-sm-2 offset-md-3">
-                    <button class="btn btn-lg my-font btn-light rounded">Hire Me</button>
-                </div>
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </section> <!-- end of section -->
-
-    <!-- testimonial section -->
-    <section class="section" id="testmonial">
-        <div class="container text-center">
-            <p class="section-subtitle">What Think Client About Me ?</p>
-            <h6 class="section-title mb-6">Testmonial</h6>
-
-            <!-- row -->
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar2.jpg" class="testimonial-card-img"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
-                                adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="testimonial-card">
-                        <div class="testimonial-card-img-holder">
-                            <img src="assets/imgs/avatar3.jpg" class="testimonial-card-img"
-                                alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
-                        </div>
-                        <div class="testimonial-card-body">
-                            <p class="testimonial-card-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing
-                                elit. Eaque doloribus autem aperiam earum nostrum omnis blanditiis corporis perspiciatis
-                                adipisci nihil.</p>
-                            <h6 class="testimonial-card-title">Emily Reb</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end of container -->
-    </section> <!-- end of testimonial section -->
-
-    <!-- blog section -->
-    <section class="section" id="blog">
-        <!-- container -->
-        <div class="container text-center">
-            <p class="section-subtitle">Recent Posts?</p>
-            <h6 class="section-title mb-6">Blog</h6>
+            <p class="section-subtitle" data-aos="fade-down">Những dự án tôi đã tham gia</p>
+            <h6 class="section-title mb-6">Dự án của tôi</h6>
             <!-- blog-wrapper -->
             <div class="blog-card">
                 <div class="blog-card-header">
-                    <img src="assets/imgs/img-1.jpg" class="blog-card-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <img src="assets/imgs/solar-system.avif" class="blog-card-img" alt="Img">
                 </div>
                 <div class="blog-card-body">
-                    <h5 class="blog-card-title">Consectetur adipisicing elit</h6>
+                    <h5 class="blog-card-title">Phần mềm mô hình 3D</h6>
 
                         <p class="blog-card-caption">
-                            <a href="#">By: Admin</a>
-                            <a href="#"><i class="ti-heart text-danger"></i> 234</a>
-                            <a href="#"><i class="ti-comment"></i> 123</a>
+                            <a>6/2024 - 7/2024</a>
                         </p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet nesciunt qui sit velit
-                            delectus voluptates, repellat ipsum culpa id deleniti. Rerum debitis facilis accusantium
-                            neque numquam mollitia modi quasi distinctio.</p>
+                        <p> Hiển thị và thao tác với các mô hình 3D được phân loại theo môn học và khối lớp để phục vụ
+                            công tác giảng dạy của giáo viên trong trường học</p>
 
-                        <p><b>Necessitatibus nihil impedit! Ex nisi eveniet, dolor aliquid consequuntur repudiandae.</b>
+                        <p><b>Necessitatibus nihil impedit! Ex nisi eveniet, dolor aliquid consequuntur
+                                repudiandae.</b>
                         </p>
                         <p>Magnam in repellat enim harum omnis aperiam! Explicabo illo, commodi, dolor blanditiis
                             cupiditate harum nisi vero accusamus laudantium voluptatibus dolores quae obcaecati.</p>
@@ -369,11 +256,10 @@
             <!-- blog-wrapper -->
             <div class="blog-card">
                 <div class="blog-card-header">
-                    <img src="assets/imgs/img-2.jpg" class="blog-card-img"
-                        alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
+                    <img src="assets/imgs/img-2.jpg" class="blog-card-img" alt="Img">
                 </div>
                 <div class="blog-card-body">
-                    <h5 class="blog-card-title">Explicabo illo</h6>
+                    <h5 class="blog-card-title">Hệ thống quản lý GDGroup</h6>
 
                         <p class="blog-card-caption">
                             <a href="#">By: Admin</a>
@@ -383,10 +269,12 @@
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit excepturi laborum enim,
                             vitae ipsam atque eum, ad iusto consequuntur voluptas, esse doloribus. Perferendis porro
-                            quisquam vitae exercitationem aliquid, minus eos laborum repudiandae, cumque debitis iusto
+                            quisquam vitae exercitationem aliquid, minus eos laborum repudiandae, cumque debitis
+                            iusto
                             omnis praesentium? Laborum placeat sit adipisci illum tempore maxime, esse qui quae?
                             Molestias excepturi corporis similique doloribus. Esse vitae earum architecto nulla non
-                            dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere, delectus
+                            dolores illum at perspiciatis quod, et deleniti cupiditate reiciendis harum facere,
+                            delectus
                             eum commodi soluta distinctio sit repudiandae possimus sunt. Ipsum, rem.</p>
 
                         <a href="#" class="blog-card-link">Read more <i class="ti-angle-double-right"></i></a>
@@ -394,7 +282,26 @@
             </div><!-- end of blog wrapper -->
 
         </div><!-- end of container -->
-    </section><!-- end of blog section -->
+
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+    <!-- section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+                </div>
+
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+    <!-- testimonial section -->
+
 
     <!-- contact section -->
     <section class="section" id="contact">
@@ -450,7 +357,13 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
+    <script src="i18n.js"></script>
 
+    <!-- aos -->
+    <script src="assets/dist/aos.js"></script>
 </body>
+<script>
+    AOS.init();
+</script>
 
 </html>
